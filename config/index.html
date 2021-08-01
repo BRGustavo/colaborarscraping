@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela atividades</title>
+    <style>
+        header {
+            display: flex;
+            align-items: center;
+        }
+        header h2 {
+            text-align: center;
+        }
+        p {
+            margin-bottom: -15px;
+        }
+        table {
+            margin-top: 20px;
+            border-color: black;
+        }
+        table .cabecalho th {
+            padding:5px;
+        }
+        table tr td {
+            padding: 1px 5px 1px 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="comecar()">
+    <header>
+        <div class="imagem">
+            <img src="./logo-azul.png" alt="">
+        </div>
+        <h2>Colaborar Atividades</h2>
+    </header>
+    <main>
+        <table id="1" border="0">
+            <tr class="cabecalho">
+                <th>Matéria</th>
+                <th>Atividade</th>
+                <th>Inicio Atividades</th>
+                <th>Fim Atividades</th>
+            </tr>
+
+        </table>
+    </main>
+    <script>
+        var cor = "preto"
+        function elementoCor(){
+            if(cor == "preto"){
+                cor = "branco";
+                return "rgb(155, 154, 154)"
+            }else{
+                cor = "preto"
+                return "rgb(228, 224, 224)"
+            }
+        }
+        function comecar() {
+            tabelaMae = window.document.getElementById('1');
+            lista_data=
+
+            items = JSON.stringify(lista_data);
+            items = JSON.parse(items);
+            for(let item of items){
+                elementoPai = window.document.createElement("tr");
+                let cor = elementoCor()
+                for(const [key, value] of Object.entries(item)){
+                    elementoFilho = window.document.createElement("td");
+                    elementoFilho.innerText = value
+                    elementoFilho.style.backgroundColor = cor;
+                    elementoPai.appendChild(elementoFilho)
+                }
+                tabelaMae.appendChild(elementoPai)
+            }
+        }
+    </script>
+</body>
+</html>
