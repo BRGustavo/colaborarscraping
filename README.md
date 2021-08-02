@@ -2,7 +2,7 @@
 O código acima tem por objetivo principal a criação de uma tabela informativa que apresenta dados disponíveis no painel
 do aluno da faculdade UNOPAR. No arquivo são descritos as atividades do semestre atual e sua data de inicio e fim.
 O programa visa facilitar o processo de programação do aluno, tendo como ação principal a organização de forma visual das
-atividades que devem ser realizadas e em qual período estará disponível podendo ser transformado em um documento físico.
+atividades que devem ser realizadas e em qual período estará disponível, podendo então ser transformado em um documento físico.
 
 ## Video demonstrativo
 Clique na imagem abaixo para visualizar o video.
