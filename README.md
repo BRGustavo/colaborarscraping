@@ -5,24 +5,36 @@ O programa visa facilitar o processo de programação do aluno, tendo como açã
 atividades que devem ser realizadas e em qual período estará disponível podendo ser transformado em um documento físico.
 
 ## Video demonstrativo
-Clique na imagem abaixo para visualizar o video
-[![Watch the video](https://i.ytimg.com/an_webp/o0sKw_8Qr8k/mqdefault_6s.webp?du=3000&sqp=CN3um4gG&rs=AOn4CLDrRh5DBHP0xqfcBQ_7kwqs_LFhuA)](https://youtu.be/o0sKw_8Qr8k)
+Clique na imagem abaixo para visualizar o video.
+
+[![Olhe o video](https://i.imgur.com/6rrCGzo.png)](https://youtu.be/o0sKw_8Qr8k)
+
+
+## Instalação Windows
+- Baixe o arquivo a seguir:
+
+   [Windows programa Colaborar](https://github.com/BRGustavo/colaborarscraping/releases/download/1.0.0/colaboraread-Windows.rar)
+
+- Execute o arquivo app.exe e seja feliz! :D
 
 ## Instalação Linux
-Até o presente momento, este código funciona apenas para sistema linux com python3 instalado
+Clone o repositório atual
 
-- Clone o repositório atual
-`sudo git clone https://github.com/BRGustavo/colaborarscraping.git colaboraread`
+- `sudo git clone https://github.com/BRGustavo/colaborarscraping.git colaboraread`
 
-- Crie um ambiente virtual (virtualenv)
-`sudo virtualenv venv`
+Crie um ambiente virtual (virtualenv)
 
-- Ative o ambiente virtual
-`. venv/bin/activate`
+- `sudo virtualenv venv`
 
-- Instale as bibliotecas necessárias
-`pip3 install -r requeriments.txt`
+Ative o ambiente virtual
 
-- Execute o programa
-`python3 app.py`
+- `. venv/bin/activate`
+
+Instale as bibliotecas necessárias
+
+- `pip3 install -r requeriments.txt`
+
+Execute o programa
+
+- `python3 app.py`
 

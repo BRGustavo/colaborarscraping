@@ -52,6 +52,7 @@ class NavegarColaborar:
                 materia_titulo = re.sub(r'\([0-9]{1,100}\)', ' ', materia_titulo)
                 materia_titulo = materia_titulo.strip()
 
+
                 quadro_atividade = self.current_page.query_selector_all('.timeline-panel')
                 self.wait_page(100)
                 for info_quadro in quadro_atividade:
@@ -67,6 +68,7 @@ class NavegarColaborar:
                     inicio_periodo, fim_periodo = self.date(periodo)
                     self.list_data.append({'Materia': materia_titulo, 'Atividade': titulo_atividade,
                                            'Inicio': inicio_periodo, 'Fim': fim_periodo})
+
 
     def clicar(self, item):
         self.wait_page(2)
@@ -101,14 +103,14 @@ class NavegarColaborar:
         return valor
 
     def transformar_html(self):
-        HTML_File = open("config/index.html")
+        HTML_File = open("config/index.html", 'r', encoding="utf-8")
         arquivo = HTML_File.read()
         HTML_File.close()
 
         objeto = BeautifulSoup(arquivo, "html.parser")
         finder = objeto.prettify()
         finder = finder.replace("lista_data=", f"lista_data = {self.list_data}")
-        with open("./config/pag_teste.html", 'w') as nova_pagina:
+        with open("./config/pag_teste.html", 'w', encoding="utf-8") as nova_pagina:
             nova_pagina.write(finder)
         sleep(10)
 
@@ -117,11 +119,3 @@ class NavegarColaborar:
                               print_background=True)
         os.remove("./config/pag_teste.html")
 
-
-if __name__ == "__main__":
-    usuario = str(input("Username: ")).strip()
-    senha = str(input("Password: ")).strip()
-    colaborar = NavegarColaborar('https://www.colaboraread.com.br/', usuario, senha)
-    colaborar.get_all_colaborar_info()
-    colaborar.transformar_html()
-    colaborar.close_page()

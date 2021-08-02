@@ -69,7 +69,7 @@
                 let cor = elementoCor()
                 for(const [key, value] of Object.entries(item)){
                     elementoFilho = window.document.createElement("td");
-                    elementoFilho.innerText = value
+                    elementoFilho.innerText =  (value)
                     elementoFilho.style.backgroundColor = cor;
                     elementoPai.appendChild(elementoFilho)
                 }
